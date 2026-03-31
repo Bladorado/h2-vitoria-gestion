@@ -15,15 +15,15 @@ export default function RootLayout({ children }) {
       lang="es"
       className=""
     >
-      <body className="font-courier flex h-screen bg-green-300">
+      <body className="font-courier flex h-screen bg-green-50">
         {/* BARRA LATERAL (Sidebar) - Siempre visible */}
         <nav className="w-64 bg-rose-50 text-black p-6 flex flex-col gap-4 h-screen">
           <h2 className="text-2xl font-bold mb-8 text-blue-400">H2-Vitoria: Gestión de Hidrógeno💧</h2>
 
           {/* Usamos <Link> para navegación instantánea */}
-          <Link href="/" className="hover:text-blue-300 transition">Inicio</Link>
-          <Link href="/linea-H2" className="hover:text-blue-300 transition">Línea H2</Link>
-          <Link href="/seguridad" className="hover:text-blue-300 transition">Seguridad</Link>
+          <Link href="/" className="hover:text-blue-300 transition font-bold">Inicio</Link>
+          <Link href="/linea-H2" className="hover:text-blue-300 transition font-bold">Línea H2</Link>
+          <Link href="/seguridad" className="hover:text-blue-300 transition font-bold">Seguridad</Link>
         
 
           <div className="mt-auto text-xs text-slate-500">

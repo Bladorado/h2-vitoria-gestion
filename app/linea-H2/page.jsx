@@ -8,22 +8,23 @@ import { useState } from "react";
 
 export default function LineaH2() {
 
-    const [pt1, setPt1] = useState(false);
-    const [pt2, setPt2] = useState(false);
+
+    const [presionAlfa, setPresionAlfa] = useState(0);
+    const [presionBeta, setPresionBeta] = useState(0);
 
 
     return (
-        <div className="p-6 space-y-6">
-            <h1 className="text-3xl font-bold text-center">
+        <div className="p-6 space-y-6 bg-red-100 w-full">
+            <h1 className="text-3xl text-black font-bold text-center">
                 Línea H2
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <TanqueH2 nombre="Tanque Alfa" setPt1={setPt1} pt1={pt1} setPt2={setPt2} pt2={pt2} />
-                <TanqueH2 nombre="Tanque Beta" setPt1={setPt1} pt1={pt1} setPt2={setPt2} pt2={pt2} />
+                <TanqueH2 nombre="Tanque Alfa"  onPresionChange={setPresionAlfa} />
+                <TanqueH2 nombre="Tanque Beta"  onPresionChange={setPresionBeta} />
             </div>
 
-            <Camion pt1={pt1} pt2={pt2} />
+            <Camion presionAlfa={presionAlfa} presionBeta={presionBeta} />
         </div>
     )
 }
