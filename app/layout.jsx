@@ -15,14 +15,14 @@ export default function RootLayout({ children }) {
       lang="es"
       className=""
     >
-      <body className="min-h-full flex flex-col">
+      <body className="font-courier flex h-screen bg-green-300">
         {/* BARRA LATERAL (Sidebar) - Siempre visible */}
-        <nav className="w-64 bg-rose-50 text-black p-6 flex flex-col gap-4">
+        <nav className="w-64 bg-rose-50 text-black p-6 flex flex-col gap-4 h-screen">
           <h2 className="text-2xl font-bold mb-8 text-blue-400">H2-Vitoria: Gestión de Hidrógeno💧</h2>
 
           {/* Usamos <Link> para navegación instantánea */}
           <Link href="/" className="hover:text-blue-300 transition">Inicio</Link>
-          <Link href="/línea-H2" className="hover:text-blue-300 transition">Línea H2</Link>
+          <Link href="/linea-H2" className="hover:text-blue-300 transition">Línea H2</Link>
           <Link href="/seguridad" className="hover:text-blue-300 transition">Seguridad</Link>
         
 
@@ -32,16 +32,14 @@ export default function RootLayout({ children }) {
               width="100"
               height={100}
               src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
-              alt='operario trabajando en la producción de un coche Mercedes'
+              alt='Compuatador de Mesa'
               className="rounded-lg shadow-2xl w-sm"
             />
             Planta Vitoria-Gasteiz v2.0
           </div>
         </nav>
 
-        <main>
           {children}
-        </main>
       </body>
     </html>
   );
