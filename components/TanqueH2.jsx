@@ -1,12 +1,16 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 
-export default function TanqueH2({ nombre }) {
+export default function TanqueH2({ nombre, pt1, setPt1, pt2, setPt2 }) {
 
     const [presion, setPresion] = useState(0);
     const [temperatura, setTemperatura] = useState("Cargando...");
     const [humedad, setHumedad] = useState(null);
+
+
+   
 
     useEffect(() => {
         async function llamarAltiempo() {
@@ -66,6 +70,7 @@ export default function TanqueH2({ nombre }) {
                     </p>
                 )}
 
+            
 
                 <button
                     onClick={aumentarPresion}
