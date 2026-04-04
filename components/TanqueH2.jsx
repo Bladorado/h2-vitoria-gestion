@@ -69,7 +69,7 @@ export default function TanqueH2({ nombre, onPresionChange }) {
                 <h2 className="text-xl font-bold">{nombre}</h2>
 
                 <p className={presion > 700 ? "text-red-500 font-bold" : "text-green-600"}>
-                    Presión: {presion} bares
+                    Presión: En Tanques {presion} bares
                 </p>
 
                 {presion > 700 && (
